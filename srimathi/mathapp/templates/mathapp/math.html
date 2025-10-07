@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <style>
+        body{
+          background-color: rgb(19, 0, 128);
+          border-top: 20;
+        }
+        .m{
+          background-color: rgb(183, 255, 0);
+          border-style: dotted;
+          margin-top: 150px;
+          margin-left: 500px;
+          margin-right: 500px;
+          
+        }
+            .main{
+                font-size: 250%;
+                text-align: center;
+                background-color: rgb(255, 247, 0);
+                 margin-left: 50px;
+                  margin-right: 50px;
+                  padding: 50px;
+                  
+                  
+            }
+            .a{
+                font-size: 150%;
+                text-align: center;
+                background-color: rgb(195, 255, 0);
+                 margin-left: 50px;
+                  margin-right: 50px;
+                
+                 
+            }
+            form{
+              text-align: center;
+              background-color: rgb(251, 255, 0);
+               margin-left: 50px;
+             margin-right: 50px;
+             padding: 50px;
+            }
+           
+        </style>
+    </head>
+    <body>
+
+       <div class="m">
+        <div class="main">BMI Calculator</div>
+        <div class="a">
+         Srimathi.S (25017525)</div>
+        <form method="post">
+          {% csrf_token %}
+           
+           
+            <label>Weight(kg)=</label>
+            <input type="text" name="weight" value="{{w}}"><br><br>
+             <label>Height(cm)=</label>
+            <input type="text" name="height" value="{{h}}"><br><br>
+            <button type="submit">Calculate</button><br><br>
+            <label>BMI=</label>
+            <input type="text" name="bmi" value="{{bmi}}">
+        </div>
+        </form>
+        
+        
+    </body>
+</html>
